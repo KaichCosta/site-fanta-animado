@@ -66,6 +66,8 @@ main {
     background-image: linear-gradient(150deg, #ffa600, #ff5e00);
 }
 
+#logo {width: 150px;}
+
 .hero h1 {
     font-size: 25vw;
     color: var(--cor-texto);
@@ -79,6 +81,7 @@ main {
 #fanta {
     width: 40%;
     position: absolute;
+    z-index: 3;
 }
 
 #laranja-cortada {

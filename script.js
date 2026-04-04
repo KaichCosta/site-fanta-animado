@@ -5,8 +5,9 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({ //tl = timeline
     scrollTrigger: {
         trigger: ".info",
-        start: '0% 95%',
-        end: '70% 50%',
+        start: 'top 95%',
+        end: '90% 80%',
+        endTrigger: ".opcoes",
         scrub: true,
         markers: true, //depuração
     },
@@ -61,17 +62,8 @@ tl.to(
 );
 
 //Timeline da seção info/opcoes
-const tl2 = gsap.timeline({ //tl = timeline
-    scrollTrigger: {
-        trigger: ".opcoes",
-        start: '0% 95%',
-        end: '20% 50%',
-        scrub: true,
-        markers: true, //depuração
-    },
-});
 
-tl2.from(
+tl.from(
     '#limao1',
     {
         top: '110%', //move o elemento com id 'limao1' para 110% do topo
@@ -81,7 +73,7 @@ tl2.from(
     'conjunto-animado2' //Nomeando esse trecho de animação como 'conjunto-animado2' para sincronização
 );
 
-tl2.from(
+tl.from(
     '#cocacola',
     {
         top: '110%', //move o elemento com id 'cocacola' para 110% do topo
@@ -91,7 +83,7 @@ tl2.from(
     'conjunto-animado2' //Nomeando esse trecho de animação como 'conjunto-animado2' para sincronização
 );
 
-tl2.from(
+tl.from(
     '#limao2',
     {
         top: '110%', //move o elemento com id 'limao2' para 110% do topo
@@ -101,7 +93,7 @@ tl2.from(
     'conjunto-animado2' //Nomeando esse trecho de animação como 'conjunto-animado2' para sincronização
 );
 
-tl2.from(
+tl.from(
     '#pepsi',
     {
         top: '110%', //move o elemento com id 'pepsi' para 110% do topo
@@ -111,22 +103,22 @@ tl2.from(
     'conjunto-animado2' //Nomeando esse trecho de animação como 'conjunto-animado2' para sincronização
 );
 
-tl2.from(
+tl.to(
     '#laranja-cortada',
     {
-        top: '204%', //move o elemento com id 'laranja-cortada' para 204% do topo
-        left: '42%', //move o elemento com id 'laranja-cortada' para 42% da esquerda
+        top: '207%', //move o elemento com id 'laranja-cortada' para 207% do topo
+        left: '41%', //move o elemento com id 'laranja-cortada' para 44% da esquerda
         width: '18%' //aumenta a largura do elemento com id 'laranja-cortada' para 18%
     },
     'conjunto-animado2' //Nomeando esse trecho de animação como 'conjunto-animado2' para sincronização
 );
 
-tl2.from(
+tl.to(
     '#fanta',
     {
-        top: '210%', //move o elemento com id 'laranja-cortada' para 204% do topo
-        left: '42%', //move o elemento com id 'laranja-cortada' para 42% da esquerda
-        width: '35%',
+        top: '213%', //move o elemento com id 'fanta' para 213% do topo
+        left: '37%', //move o elemento com id 'fanta' para 37% da esquerda
+        width: '26%', //diminui a largura do elemento com id 'fanta' para 26%
     },
     'conjunto-animado2' //Nomeando esse trecho de animação como 'conjunto-animado2' para sincronização
 );
